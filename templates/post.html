@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}} - My Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <style>
+        .post-header {
+            margin-bottom: 2rem;
+        }
+        .post-title {
+            margin-bottom: 0.5rem;
+        }
+        .post-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .post-content {
+            line-height: 1.6;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-link">&larr; Back to Home</a>
+    <article>
+        <header class="post-header">
+            <h1 class="post-title">{{.Title}}</h1>
+            <div class="post-date">{{.Date.Format "January 2, 2006"}}</div>
+        </header>
+        <div class="post-content">
+            {{.Content}}
+        </div>
+    </article>
+    <footer>
+        <p>&copy; 2023 My Blog. Built with Go.</p>
+    </footer>
+</body>
+</html>
